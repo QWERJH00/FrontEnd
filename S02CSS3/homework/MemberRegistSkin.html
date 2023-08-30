@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> MemberRegistSkin.html</title>
+    <style>
+        td{
+            padding: 10px; border:1px solid rgb(229, 240, 245)
+        }
+        td#gray{
+            background-color: #e2e2e2f3;
+            font-weight: bold;
+        }
+        input, select{
+            height: 23px;
+        }
+        span{
+            height: 16px;
+            line-height: 16px;
+        }
+    </style>
+</head>
+<body>
+    <fieldset style="width: 90%; margin-left: 20px; margin-right: 10px; padding-right: 1px" >
+             
+            <table style="border: none; border-collapse: collapse; width:95%; " >
+                <tr>
+                    <div style="padding-left: 85%;"> <span style="color:red ;line-height: 16px;" >*</span> 필수입력</div>
+                    <td id="gray" ><span style="color:red">* </span>아이디</td>
+                    <td style="font-size: 15px; color: gray;"><input type="text" >&nbsp;<button style="background-color: rgb(70, 70, 70); 
+                    color:white; " > 중복확인</button>  
+                        +4~15자,첫 영문자,영문자와 숫자 조합</td>
+                </tr>
+                <tr>
+                    <td id="gray"><span style="color:red">* </span>비밀번호</td>
+                    <td><input type="password" style="width:150px;"></td>
+                </tr>
+                <tr>
+                    <td  id="gray"><span style="color:red">* </span>비밀번호 확인</td>
+                    <td style="font-size: 15px; color: gray;">
+                        <input type="password" style="width:150px;">(확인을 위해 다시 입력해 주세요.)</td>
+                </tr>
+                <tr>
+                    <td id="gray"><span style="color:red">* </span>이름</td>
+                    <td ><input type="text" required /></td>
+                </tr>
+                <tr>
+                    <td id="gray">&nbsp;생년월일</td>
+                    <td> <input type="radio" name="gender" value="M" checked="checked"/>남자
+                        &nbsp;
+                        <input type="radio" name="gender" value="F"/>여자
+                        <input type="text" style=" width:45px">년 <input type="text" style="width: 20px;">월 <input type="text" style="width: 20px;">일
+                        <span style="color: gray; font-size: 15px;">(예,2001년 01월 31일)</span>
+                        </td>
+                </tr>
+                <tr>
+                    <td rowspan="2"  id="gray"><span style="color:red">*</span>이메일</td>
+                    <td><input type="text"/>@ <input type="text"> <select name="메일주소" id="">
+                        <option value="gmail.com">gmail.com</option>
+                        <option value="daum.net">daum.net</option>
+                        <option value="naver.com">naver.com</option>
+                        <option value="yahoo.com">yahoo.com</option>
+                        <option value="nate.com">nate.com</option>
+                    </select>
+                    <input type="radio" name="mailcheck" value="y" checked>수신허용 &nbsp; <input type="radio" name="mailcheck" value="n"> 수신불가   
+                    </td>
+                    
+                </tr>
+                <tr>
+                    <td style="color: gray;">※hanmai.net은 메일 수신이 어려울 수 있으니 가급적 다른 메일을 이용하시기 바랍니다.</td>
+                </tr>
+                <tr>
+                    <td rowspan="3"  id="gray">&nbsp;주소</td>
+                    <td><button style="background-color: rgba(70, 70, 70); color: white;">주소찾기 </button>&nbsp;<input type="text" style="width:90%px ;">(우편번호)</td>
+                </tr>
+                <tr>
+                    <td><input type="text" style="width: 100%;"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" style="width: 70%;">*나머지 주소</td>
+                </tr>
+                <tr>
+                    <td id="gray">&nbsp;전화번호</td>
+                    <td><input type="tel" style="width:50px">-<input type="tel" style="width:80px">-<input type="tel" style="width:80px"></td>
+                </tr>
+                <tr>
+                    <td id="gray"><span style="color:red">* </span>휴대전화</td>
+                    <td>
+                        <input type="tel" style="width:50px">-<input type="tel" style="width:80px">-<input type="tel" style="width:80px">
+                        <input type="radio" name="SMScheck" value="y" checked>SMS 수신허용 &nbsp; <input type="radio" name="SMScheck" value="n"> SMS 수신불가
+                    </td>
+                </tr>
+                <tr>
+                    <td id="gray"><span style="color:red">* </span>관심분야</td>
+                    <td><select name="inter" id="" style=" width: 400px;">
+                        <option value="none">:::관심분야를 설정해주세요:::</option>
+                        <option value="sports">스포츠</option>
+                        <option value="art">예술</option>
+                        <option value="game">게임</option>
+                        <option value="cartoon">만화</option>
+                        <option value="global">국제</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <td id="gray"><span style="color:red">* </span>가입경로</td>
+                    <td><select name="signup" id="" style=" width: 400px;">
+                        <option value="none">:::가입경로를 선택해주세요:::</option>
+                        <option value="portal">포탈사이트</option>
+                        <option value="email">이메일</option>
+                        <option value="magazine">잡지</option>
+                        <option value="blog">블로그</option>
+                        <option value="insta">인스타</option>
+                    </select></td>
+                </tr>
+
+            </table>
+            <br>
+            <div style="text-align: center;">
+            <button style="background-color: rgb(231, 14,22) ;color:white; width:150px; height: 35px; font-size: 16px; border-radius: 5px; border: red;">등록하기</button>
+            <button style="background-color: rgb(70, 70, 70); color:white; width:150px; height: 35px; font-size: 16px; border-radius: 5px; border: gray;">새로쓰기</button>
+            </div>
+    </fieldset>
+</body>
+</html>
